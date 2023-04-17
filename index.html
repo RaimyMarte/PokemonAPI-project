@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Pokemon API</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img src="pokeball.png" alt="logo" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#evolutions_title">Evolutions</a>
+                    </li>
+                </ul>
+                <form action="GET" class="d-flex" role="search">
+                    <input class="form-control me-2" id="search_pokemon" type="search" placeholder="pikachu"
+                        aria-label="Search">
+                    <button class="btn btn-outline-light" id="buscar_Btn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container-sm position-relative">
+        <i class="bi bi-arrow-bar-left arrow-buttons" id="prev-button"></i>
+        <i class="bi bi-arrow-bar-right arrow-buttons" id="next-button"></i>
+        <div class="row justify-content-center align-items-center mb-5 mt-4">
+            <div class="col-md-10 col-lg-8 col-10" id="pokemon-card">
+                <div class="container ">
+                    <div class="row justify-content-between align-items-center">
+                        <h1 id="pokemon-name"></h1>
+                        <div class="col-lg-6 col-12">
+                            <img src="" alt="pokemon" id="pokemon-image" class="img-fluid">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p id="pokemon-id" class="pokemon-card-text"></p>
+                            <p id="pokemon-eggGroups" class="pokemon-card-text">
+                            <p id="pokemon-category" class="pokemon-card-text">
+                            <p id="pokemon-abilities" class="pokemon-card-text"></p>
+
+                            <p id="pokemon-height" class="pokemon-card-text"></p>
+                            <p id="pokemon-weight" class="pokemon-card-text"></p>
+                            <p id="pokemon-habitat" class="pokemon-card-text"></p>
+                            <p id="pokemon-generation" class="pokemon-card-text"></p>
+                            <p>Type </p>
+                            <div class="pokemon-card-text row align-items-center gap-2">
+                                <div id="pokemon-type1-card" class="text-center pokemon-type-card mt-2 col-3"><span
+                                        id="pokemon-type1"></span></div>
+                                <div id="pokemon-type2-card" class="text-center pokemon-type-card mt-2 col-3">
+                                    <span id="pokemon-type2"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row justify-content-start align-items-center mt-5">
+                        <div class="col-11 col-lg-6 ">
+                            <h3>Stats</h3>
+                            <label>HP</label>
+                            <div class="stat w-100 mb-1">
+                                <div class="stat-bar text-center" id="hp-bar"></div>
+                            </div>
+
+                            <label>Attack</label>
+                            <div class="stat w-100 mb-1">
+                                <div class="stat-bar text-center" id="attack-bar"></div>
+                            </div>
+
+                            <label>Defense</label>
+                            <div class="stat w-100 mb-1">
+                                <div class="stat-bar text-center" id="defense-bar"></div>
+                            </div>
+
+                            <label>Special Attack</label>
+                            <div class="stat w-100 mb-1">
+                                <div class="stat-bar text-center" id="special-attack-bar"></div>
+                            </div>
+
+                            <label>Special Defense</label>
+                            <div class="stat w-100 mb-1">
+                                <div class="stat-bar text-center" id="special-defense-bar"></div>
+                            </div>
+
+                            <label>Speed</label>
+                            <div class="stat w-100 mb-4">
+                                <div class="stat-bar text-center" id="speed-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center mt-5">
+            <h2 id="evolutions_title" class="col-10 col-lg-9 text-white">Evolutions</h2>
+        </div>
+        <div class="row justify-content-center align-items-center mb-5 gap-4">
+            <div class="col-md-5 col-lg-3 col-10 pokemon-evolution-container text-center"
+                id="pokemon-evolution-container-1">
+                <h4 id="pokemon-evolution-name-1"></h4>
+                <img src="" alt="evolution1" id="pokemon-evolution-image-1" class="evolution-image">
+            </div>
+            <div class="col-md-5 col-lg-3 col-10 pokemon-evolution-container text-center"
+                id="pokemon-evolution-container-2">
+                <h4 id="pokemon-evolution-name-2"></h4>
+                <img src="" alt="evolution2" id="pokemon-evolution-image-2" class="evolution-image">
+            </div>
+            <div class="col-md-5 col-lg-3 col-10 pokemon-evolution-container text-center"
+                id="pokemon-evolution-container-3">
+                <h4 id="pokemon-evolution-name-3"></h4>
+                <img src="" alt="evolution3" id="pokemon-evolution-image-3" class="evolution-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="footerContainer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-white">© 2023 Company, Inc</p>
+      
+          <a href="#navbar" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="pokeball.png" alt="logo" id="logo">
+          </a>
+      
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#navbar" class="nav-link px-2 text-white">Home</a></li>
+            <li class="nav-item"><a href="#evolutions_title" class="nav-link px-2 text-white">Evolutions</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+          </ul>
+        </footer>
+      </div>
+      
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

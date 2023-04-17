@@ -1,0 +1,188 @@
+:root {
+    --normal: #A8A77A;
+    --fire: #EE8130;
+    --water: #6390F0;
+    --electric: #F7D02C;
+    --grass: #7AC74C;
+    --ice: #96D9D6;
+    --fighting: #C22E28;
+    --poison: #A33EA1;
+    --ground: #E2BF65;
+    --flying: #A98FF3;
+    --psychic: #F95587;
+    --bug: #A6B91A;
+    --rock: #B6A136;
+    --ghost: #735797;
+    --dragon: #6F35FC;
+    --dark: #705746;
+    --steel: #B7B7CE;
+    --fairy: #D685AD;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    background-image: url(background.jpg);
+    background-attachment: fixed;
+
+}
+
+#footerContainer {
+    margin-top: 10rem;
+}
+.nav-link {
+    color: white;  
+    }
+    
+    .nav-link:hover {
+    color: red;
+    }
+#pokemon-card {
+    color: white;
+    background-color: #151513;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}
+
+.stat {
+    background-color: white;
+    border-radius: 20px;
+    height: 20px;
+}
+
+.stat-bar {
+    background: var(--fairy);
+    border-radius: 20px;
+    height: 20px;
+    font-size: 1rem;
+}
+
+.pokemon-evolution-container {
+    color: white;
+    background-color: #151513;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.pokemon-evolution-container:hover {
+    background-color: #1f1f1f;
+    transform: scale(1.08);
+    transition: 0.5s;
+}
+
+#pokemon-image {
+    max-height: 300px;
+}
+
+#logo {
+    width: 40px;
+    margin-left: 1rem;
+}
+
+.pokemon-type-card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+#pokemon-name {
+    margin-top: 20px;
+}
+
+.pokemon-card-text {
+    margin-top: 15px;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.evolution-image {
+    height: 150px;
+}
+
+#evolutions_title {
+    margin: 1.5rem 0 1rem;
+}
+
+.arrow-buttons {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.7s;
+    position: absolute;
+    top: 23%;
+}
+
+.arrow-buttons:hover {
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+
+#prev-button {
+    left: 0;
+}
+
+#next-button {
+    right: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.slide-in-elliptic-top-fwd {
+    animation: slide-in-elliptic-top-fwd .7s cubic-bezier(.25, .46, .45, .94) both
+}
+
+@keyframes slide-in-elliptic-top-fwd {
+    0% {
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform-origin: 50% 100%;
+        opacity: 0
+    }
+
+    100% {
+        transform: translateY(0) rotateX(0) scale(1);
+        transform-origin: 50% 1400px;
+        opacity: 1
+    }
+}
+
+.roll-in-left {
+    animation: roll-in-left .6s ease-out both
+}
+
+@keyframes roll-in-left {
+    0% {
+        transform: translateX(-800px) rotate(-540deg);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1
+    }
+}
+
+@media (max-width: 576px) {
+    .arrow-buttons {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .arrow-buttons {
+        top: 12%;
+    }
+
+
+}
